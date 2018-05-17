@@ -32,7 +32,7 @@ def webhook():
 def processRequest(req):    
     #for wolfram alpha
     if req.get("result").get("action") == "fact":
-        client = wolframalpha.Client("4393W5-W6E838H957")
+        client = wolframalpha.Client("23VV9Q-QHU8769W2U")
         john = client.query(req.get("result").get("resolvedQuery"))
         answer = next(john.results).text
         return {
@@ -114,7 +114,7 @@ def processRequest(req):
             
     #for local time
     elif req.get("result").get("action") == "time":
-        app_id = "4393W5-W6E838H957"
+        app_id = "23VV9Q-QHU8769W2U"
         client = wolframalpha.Client(app_id)
         john = client.query("time in bangalore")
         answer = next(john.results).text
